@@ -32,7 +32,7 @@ export default function Contact() {
           </a>
 
           {/* CONTACT INFO */}
-          <div className="mt-16 flex flex-col sm:flex-row justify-center gap-4 pb-8 sm:pb-0 sm:gap-28 text-gray-500 text-sm">
+          <div className="mt-16 flex flex-col sm:flex-row flex-wrap justify-center gap-4 pb-8 sm:pb-0 sm:gap-10 text-gray-500 text-sm">
             
             <div className="flex items-center gap-2">
                 <a className="group flex items-center gap-2 hover:text-black transition-all duration-200" href="https://dribbble.com/alifnurs" target="_blank">

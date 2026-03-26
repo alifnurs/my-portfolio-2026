@@ -63,8 +63,8 @@ export default function Hero() {
           ref={titleRef}
           className={`${lora.className} text-[clamp(2.25rem,10vw,150px)] font-light italic leading-[1.05] text-black sm:leading-none`}
         >
-          <span className="mr-2 inline sm:mr-8 md:mr-16 lg:mr-20">I’m </span>
-          <span className="inline-block md:translate-x-16 lg:translate-x-24 xl:translate-x-30">
+          <span className="mr-2 inline sm:mr-8 md:mr-16 lg:mr-20">I'm </span>
+          <span className="inline-block md:translate-x-16 lg:translate-x-24 xl:translate-x-35">
             ui/ux
           </span>
         </h2>

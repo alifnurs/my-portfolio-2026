@@ -54,24 +54,24 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" ref={heroRef} className="pt-20 relative overflow-hidden rounded-b-[28px] bg-[#f3f3f3] sm:rounded-b-[40px] md:rounded-b-[60px]">
+    <section id="hero" ref={heroRef} className="pt-20 relative overflow-hidden rounded-b-[28px] bg-[#f3f3f3] sm:rounded-b-[40px] md:rounded-b-[60px] max-w-full">
       
 
       {/* HERO CONTENT */}
       <div className="overflow-hidden relative flex min-h-[min(42vh,420px)] flex-col items-center justify-center px-3 pb-16 pt-4 text-center sm:px-6 sm:pt-6 md:min-h-[min(65vh,720px)] md:pb-32 md:pt-8">
         <h2
           ref={titleRef}
-          className={`${lora.className} max-w-[90vw] text-[clamp(2.25rem,10vw,150px)] font-light italic leading-[1.05] text-black sm:leading-none`}
+          className={`${lora.className} max-w-full text-[clamp(2.25rem,10vw,150px)] font-light italic leading-[1.05] text-black sm:leading-none`}
         >
           <span className="mr-2 inline sm:mr-8 md:mr-16 lg:mr-20">I'm </span>
-          <span className="inline-block md:translate-x-0 lg:translate-x-24 xl:translate-x-35">
+          <span className="inline-block lg:translate-x-24 xl:translate-x-35">
             ui/ux
           </span>
         </h2>
 
-        <div className="mt-1 flex items-center justify-center text-[clamp(2.5rem,14vw,150px)] font-extrabold leading-none text-primary sm:mt-0 max-w-[95vw]">
+        <div className="mt-1 flex items-center justify-center text-[clamp(2.5rem,14vw,150px)] font-extrabold leading-none text-primary sm:mt-0 max-w-full">
           <span className="mr-2 sm:mr-4 md:mr-[clamp(2rem,6vw,100px)]">DESI</span>
-          <span className="translate-x-0 md:translate-x-0 lg:translate-x-20 xl:translate-x-25">
+          <span className="translate-x-0 lg:translate-x-20 xl:translate-x-25">
             GNER
           </span>
         </div>

@@ -56,11 +56,29 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    if (isOpen) {
+      const scrollY = window.scrollY;
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      document.body.style.top = `-${scrollY}px`; // simpan posisi scroll
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1); // kembalikan posisi scroll
+    }
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.width = "";
+      document.body.style.top = "";
     };
   }, [isOpen]);
+
+  
 
   return (
     <div
@@ -87,7 +105,7 @@ export default function Navbar() {
 
         <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden flex flex-col justify-center items-center gap-1 z-60 "
+            className="md:hidden flex flex-col justify-center items-center gap-1 z-100 "
           >
             {/* TOP */}
             <span
